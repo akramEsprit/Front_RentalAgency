@@ -1,0 +1,40 @@
+/*  ----------------------- BODY --------------------------- */
+
+
+ 
+
+/*  ----------------------- NAVIGATION --------------------------- */
+nav {
+    ul {
+        margin-left: $gutter;
+        border-left: 1px solid rgba(0,0,0,0.3);
+    }
+    ul li {width: auto;}
+    ul li:last-child{border-right: 1px solid rgba(0,0,0,0.3);}
+    ul li a {
+        padding: .5rem 1rem;
+    }
+} // end nav
+
+
+
+
+
+
+
+
+/*  ----------------------- MAIN --------------------------- */
+main {
+    figure.photo {width: 25%-$gutterdbl; float: left; }
+    
+    
+    div.blog article {
+        float: left;
+        width: 33.33%-$gutterdbl;
+    } // end blog
+    
+    div.blog article:nth-child(2n+1) { clear: none;}
+    div.blog article:nth-child(3n+1) { clear: left;}
+    
+    
+} // end main

@@ -1,0 +1,21 @@
+/*  ----------------------- MAIN --------------------------- */
+main {
+    figure.photo {width: 50%-$gutterdbl; float: left; }
+    
+    div.blog article {
+        float: left;
+        width: 50%-$gutterdbl;
+    } // end blog
+    
+    div.blog article:nth-child(2n+1) { clear: left;}
+    
+    
+        div.pop {
+        padding: 2rem 0;
+        .title {font-size: 4rem;}
+        .subtitle {font-size: 3rem;}
+        .copy {padding: 2rem 0 0 0;}
+        .copy span {font-size: 5rem; } 
+    }
+    
+} // end main

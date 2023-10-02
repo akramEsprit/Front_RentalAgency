@@ -1,0 +1,182 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*  ----------------------- BODY --------------------------- */
+body{
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    font-size: 16px;
+}
+
+
+/*  ----------------------- HEADER --------------------------- */
+header {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    padding: 1rem $gutter;
+    
+    form {float:right;}
+    form input {
+        width: 6rem;
+        border-radius: 10px;
+        margin-right:2%;
+        padding: .2rem;
+        border: none;    
+        transition: width .5s;
+    }
+    form input:focus{width:8rem;}
+    
+    h1 {
+        font-size: 2rem;
+        font-weight: $normalWeight;
+    } // end of h1
+    
+    h2 {
+        font-size: 1.05rem;
+        font-weight: $normalWeight;
+    } // end of h1
+    
+} // end of header
+
+
+
+/*  ----------------------- NAVIGATION --------------------------- */
+nav {
+    background-color: $secondaryColor;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    
+    ul li {
+        float: left;
+        width: 25%;
+        border-right: 1px solid rgba(0,0,0,0.3);
+    } // end of li
+    
+    ul li:last-child {border-right: none;}
+    
+    ul li a {
+        display: block;
+        text-align: center;
+        font-weight: $boldWeight;
+        padding: .5rem 0;
+        color: $primaryColor;
+        text-decoration: none;
+       transition: background 0.75s ease, color 0.75s ease;
+    } // end of anchors
+    
+
+    
+    ul li.active a {
+        background-color: darken($secondaryColor, 10%);
+    } // end of active
+    
+        ul li a:hover {
+        color:$secondaryColor;
+        background-color: $primaryColor;
+    } // end hover
+    
+} // end nav
+
+
+/*  ----------------------- MAIN --------------------------- */
+main {
+    
+    figure.banner {width: 100%;}
+    figure.banner img {width: 100%;}
+    
+    h1 {
+        font-size: 2rem;
+        margin: 1rem 0 0 $gutter;
+        color: $primaryColor;
+    } // end h1
+    
+    h2 {
+		font-size: 1.5rem;
+		margin: .75rem 0 0 $gutter;
+		color: lighten( $primaryColor, 10% );
+	} // end h2
+	
+	h3 {
+		font-size: 1.2rem;
+		color: lighten( $primaryColor, 20% );
+	} // end h2
+	p {
+		line-height: 130%;
+		color: $fontColor;
+	} // end p
+    
+    
+    hr.fadeAway {
+        background: linear-gradient(to right, rgba(66,78,100,1) 0%,rgba(66,78,100,0.01) 100%);
+        height: 2px;
+        border: none;
+        margin: 0 $gutter;
+    }
+    
+    figure.photo {width: 100%-$gutterdbl; margin: .5rem $gutter; }
+    figure.photo img {width: 100%;}
+    figure.photo figcaption{text-align: center; color: $primaryColor;}
+    
+    div.blog article {
+        margin: .5rem $gutter;
+        width: 100%-gutterdbl;
+    }
+    
+    
+    
+    div.pop {
+        background-color: $accent;
+        text-align: center;
+        clear: both;
+        padding: 1rem 0;
+        .title {font-size: 2.5rem;}
+        .subtitle {font-size: 2rem; font-weight: $boldWeight;}
+        .copy {padding: .5rem 0;}
+        .copy span {
+            font-size: 3rem; 
+            color: $primaryColor; 
+            font-weight: $boldWeight;
+        } // end span
+    }
+    
+    
+} // end main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  ----------------------- FOOTER --------------------------- */
+footer {
+    width: 100%;
+    background-color: $primaryColor;
+    
+    p {
+        text-align: center;
+        color: $secondaryColor;
+        padding: .75rem 0;
+        font-size: .9rem;
+    } // end p
+    
+    p a {color: $secondaryColor;}
+    
+} // end footer
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
